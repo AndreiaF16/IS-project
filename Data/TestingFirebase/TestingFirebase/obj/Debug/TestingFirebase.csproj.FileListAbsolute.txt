@@ -1,0 +1,13 @@
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\TestingFirebase\TestingFirebase\obj\Debug\TestingFirebase.csprojAssemblyReference.cache
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\TestingFirebase\TestingFirebase\obj\Debug\TestingFirebase.Properties.Resources.resources
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\TestingFirebase\TestingFirebase\obj\Debug\TestingFirebase.csproj.GenerateResource.cache
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\TestingFirebase\TestingFirebase\bin\Debug\TestingFirebase.exe.config
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\TestingFirebase\TestingFirebase\bin\Debug\TestingFirebase.exe
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\TestingFirebase\TestingFirebase\bin\Debug\TestingFirebase.pdb
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\TestingFirebase\TestingFirebase\bin\Debug\IPLeiriaSmartCampusFirebaseIO.dll
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\TestingFirebase\TestingFirebase\obj\Debug\TestingFirebase.csproj.CopyComplete
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\TestingFirebase\TestingFirebase\obj\Debug\TestingFirebase.exe
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\TestingFirebase\TestingFirebase\obj\Debug\TestingFirebase.pdb
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\TestingFirebase\TestingFirebase\bin\Debug\Firebase.dll
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\TestingFirebase\TestingFirebase\bin\Debug\Newtonsoft.Json.dll
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\TestingFirebase\TestingFirebase\bin\Debug\System.Reactive.dll

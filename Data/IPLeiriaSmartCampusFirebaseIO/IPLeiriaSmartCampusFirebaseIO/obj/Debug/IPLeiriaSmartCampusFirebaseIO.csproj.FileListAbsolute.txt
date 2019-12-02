@@ -1,0 +1,14 @@
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\IPLeiriaSmartCampusFirebaseIO\IPLeiriaSmartCampusFirebaseIO\bin\Debug\IPLeiriaSmartCampusFirebaseIO.dll
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\IPLeiriaSmartCampusFirebaseIO\IPLeiriaSmartCampusFirebaseIO\bin\Debug\IPLeiriaSmartCampusFirebaseIO.pdb
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\IPLeiriaSmartCampusFirebaseIO\IPLeiriaSmartCampusFirebaseIO\bin\Debug\Firebase.dll
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\IPLeiriaSmartCampusFirebaseIO\IPLeiriaSmartCampusFirebaseIO\bin\Debug\LiteDB.dll
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\IPLeiriaSmartCampusFirebaseIO\IPLeiriaSmartCampusFirebaseIO\bin\Debug\Newtonsoft.Json.dll
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\IPLeiriaSmartCampusFirebaseIO\IPLeiriaSmartCampusFirebaseIO\bin\Debug\System.Reactive.dll
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\IPLeiriaSmartCampusFirebaseIO\IPLeiriaSmartCampusFirebaseIO\bin\Debug\Firebase.xml
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\IPLeiriaSmartCampusFirebaseIO\IPLeiriaSmartCampusFirebaseIO\bin\Debug\LiteDB.xml
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\IPLeiriaSmartCampusFirebaseIO\IPLeiriaSmartCampusFirebaseIO\bin\Debug\Newtonsoft.Json.xml
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\IPLeiriaSmartCampusFirebaseIO\IPLeiriaSmartCampusFirebaseIO\bin\Debug\System.Reactive.xml
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\IPLeiriaSmartCampusFirebaseIO\IPLeiriaSmartCampusFirebaseIO\obj\Debug\IPLeiriaSmartCampusFirebaseIO.csprojAssemblyReference.cache
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\IPLeiriaSmartCampusFirebaseIO\IPLeiriaSmartCampusFirebaseIO\obj\Debug\IPLeiriaSmartCampusFirebaseIO.csproj.CopyComplete
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\IPLeiriaSmartCampusFirebaseIO\IPLeiriaSmartCampusFirebaseIO\obj\Debug\IPLeiriaSmartCampusFirebaseIO.dll
+C:\IPLeiria\IS\ProjetoIS\Project\Storage\IPLeiriaSmartCampusFirebaseIO\IPLeiriaSmartCampusFirebaseIO\obj\Debug\IPLeiriaSmartCampusFirebaseIO.pdb
