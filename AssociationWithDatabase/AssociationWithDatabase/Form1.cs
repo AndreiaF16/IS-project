@@ -18,6 +18,8 @@ namespace AssociationWithDatabase
     {
         static string connectionString = @"Data Source=f1addfa7-1f87-47fb-9183-ab1b00af3c6b.sqlserver.sequelizer.com;Persist Security Info=True;User ID=styogfmpdgdczdjc;Password=kxPxixAhDiNeex8FmduXwiqu7vhWHfJh3CkcDgSpowJNBiF5C6RkV2JbgtzVqMGy";
 
+        List<Sensor> allSensors = null;
+
         MqttClient mqttClient = new MqttClient("127.0.0.1");
         string[] topics = { "source", "alerts"};
         byte[] qosLevels =
@@ -34,6 +36,7 @@ namespace AssociationWithDatabase
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            allSensors = new List<Sensor>();
             mqttClient.Connect(Guid.NewGuid().ToString());
             if (!mqttClient.IsConnected)
             {
@@ -63,7 +66,7 @@ namespace AssociationWithDatabase
                             List<Sensor> sensores = ConvertReceivedDataSource(Encoding.UTF8.GetString(e.Message));
                             foreach (var sensor in sensores)
                             {
-                                MessageBox.Show("Persistencia");
+                                allSensors.Add(sensor);
                                 SqlCommand cmd = new SqlCommand("INSERT INTO SENSORES VALUES (@id,@temperatura,@humidade,@bateria,@data,@alerta,@decricao)", conn);
                                 cmd.Parameters.AddWithValue("@id", sensor.SensorID);
                                 cmd.Parameters.AddWithValue("@temperatura", sensor.Temperature);
@@ -78,7 +81,7 @@ namespace AssociationWithDatabase
                         else if (e.Topic == "alerts")
                         {
                             Sensor sensor = Newtonsoft.Json.JsonConvert.DeserializeObject<Sensor>(Encoding.UTF8.GetString(e.Message));
-
+                            allSensors.Add(sensor);
                             SqlCommand cmd = new SqlCommand("UPDATE SENSORES SET AlertaAtivo = @AlertaAtivo, DescricaoAlerta = @DescricaoAlerta WHERE Id = @Id AND Data = @Data", conn);
                             cmd.Parameters.AddWithValue("@AlertaAtivo", sensor.ActiveAlert);
                             cmd.Parameters.AddWithValue("@DescricaoAlerta", sensor.AlertDescription);
@@ -88,16 +91,10 @@ namespace AssociationWithDatabase
                             
                         }
                         conn.Close();
-
-                        /*if (result == 0)
-                        {
-                            return NotFound();
-                        }*/
                     }
                 }
                 catch (Exception exx)
                 {
-                    //MessageBox.Show(exx.Message);
                     if (conn.State == System.Data.ConnectionState.Open)
                     {
                         MessageBox.Show("Erro na conecção");
@@ -106,6 +103,29 @@ namespace AssociationWithDatabase
 
                 }
             });
+
+
+            decimal temperatura = 0;
+            decimal humidade = 0;
+            int bateria = 0;
+            int i = 0;
+
+            foreach (var item in allSensors)
+            {
+                temperatura = temperatura + item.Temperature;
+                humidade = humidade + item.Humidity;
+                bateria = bateria + item.Battery;
+
+                i++;
+            }
+
+            this.Invoke((MethodInvoker)delegate ()
+            {
+                labelTemperatura.Text = "Average of Temperature: " + temperatura.ToString() + " ºC";
+                labelHumidade.Text = "Average of Humidity: " + humidade.ToString() + " %";
+                labelBateria.Text = "Average of Battery: " + bateria.ToString() + " %";
+            });
+
         }
 
         private List<Sensor> ConvertReceivedDataSource(string message)
@@ -144,6 +164,16 @@ namespace AssociationWithDatabase
         }
 
         private void Form1_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void labelTemperatura_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelHumidade_Click(object sender, EventArgs e)
         {
 
         }
