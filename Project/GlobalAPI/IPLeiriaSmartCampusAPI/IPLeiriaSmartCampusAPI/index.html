@@ -34,9 +34,6 @@
                                 <li class="nav-item">
                                     <a href="#gelallsensores" class="nav-link scrollSuave">Todos os sensores</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="#getsensorbyid" class="nav-link scrollSuave">Pesquisa de um sensor pelo seu Id</a>
-                                </li>
                             </ul>
                         </li>
 
@@ -129,14 +126,6 @@
                     <p>Qualquer utilizador pode visualizar os sensores: <span class="badge badge-light">(<strong>GET</strong>)</span></p>
                     <div class="p-3 bg-dark text-white rounded align-middle" style="width: 800px">
                         <p id="p_get_all_sensores" class="text-monospace p-0 m-0"></p>
-                    </div>
-                </div>
-
-                <div id="getsensorbyid" class="container mb-5">
-                    <h4>Pesquisa de um sensor pelo seu Id</h4>
-                    <p>Qualquer utilizador pode pesquisar um sensor pelo seu Id: <span class="badge badge-light">(<strong>GET</strong>)</span></p>
-                    <div class="p-3 bg-dark text-white rounded align-middle" style="width: 800px">
-                        <p id="p_get_sensor_id" class="text-monospace p-0 m-0"></p>
                     </div>
                 </div>
 
@@ -322,7 +311,6 @@
         function init() {
             var baseURL = window.location.origin + "/api/";
             document.getElementById("p_get_all_sensores").innerHTML = baseURL + "sensores";
-            document.getElementById("p_get_sensor_id").innerHTML = baseURL + "sensores/{id}";
             
 
             document.getElementById("p_get_auth").innerHTML = baseURL + "auth";
