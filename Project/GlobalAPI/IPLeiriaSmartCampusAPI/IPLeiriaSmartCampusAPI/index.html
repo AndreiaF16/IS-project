@@ -1,0 +1,347 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Products API</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">IPLeiria SmartCampus API</h1>
+            <p class="lead">
+                IPLeiria SmartCampus é uma plataforma de integração que consiste na recolha de informação da qualidade do ar no Politécnico de Leiria.
+                IPLeiria SmartCampus API permite o acesso aos dados locais, tal como registo e consulta de dados vindos dos utilizadores.
+            </p>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="shadow-sm p-3 mb-5 bg-white rounded">
+                    <ul class="nav flex-column" style="font-size:13px">
+                        <li class="nav-item">
+                            <a href="#introducao" class="nav-link scrollSuave">Introdução</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#sensores" class="nav-link scrollSuave">Sensores</a>
+                        </li>
+                        <li>
+                            <ul class="nav flex-column" style="margin-left: 1rem;">
+                                <li class="nav-item">
+                                    <a href="#gelallsensores" class="nav-link scrollSuave">Todos os sensores</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#getsensorbyid" class="nav-link scrollSuave">Pesquisa de um sensor pelo seu Id</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#utilizador" class="nav-link scrollSuave">Utilizadores</a>
+                        </li>
+                        <li>
+                            <ul class="nav flex-column" style="margin-left: 1rem;">
+                                <li class="nav-item">
+                                    <a href="#autenticar" class="nav-link scrollSuave">Autenticação</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#newuser" class="nav-link scrollSuave">Criação de um novo utilizador</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#getuser" class="nav-link scrollSuave">Obter dados do utilizador autenticado</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#updateuser" class="nav-link scrollSuave">Atualizador dados do utilizador autenticado</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#sensores-pessoais" class="nav-link scrollSuave">Sensores pessoais criados por utilizadores</a>
+                        </li>
+                        <li>
+                            <ul class="nav flex-column" style="margin-left: 1rem;">
+                                <li class="nav-item">
+                                    <a href="#getallpersonalsensors" class="nav-link scrollSuave">Obter todos os sensores do utilizadores</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#getpersonalsensorbyid" class="nav-link scrollSuave">Obter sensores do utilizador por Id</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#getpersonalsensorbyusername" class="nav-link scrollSuave">Obter sensores de um determinado utilizador</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#getpersonalsensorbyusername" class="nav-link scrollSuave">Obter sensores do utilizador autenticado</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#postnewpersonalsensor" class="nav-link scrollSuave">Criar um novo sensor</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#updatepersonalsensor" class="nav-link scrollSuave">Avaliar um sensor</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#administrador" class="nav-link scrollSuave">Administrador</a>
+                        </li>
+                        <li>
+                            <ul class="nav flex-column" style="margin-left: 1rem;">
+                                <li class="nav-item">
+                                    <a href="#getalluses" class="nav-link scrollSuave">Obter todos os utilizadores</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#updaterole" class="nav-link scrollSuave">Atualizar "Role" de um utilizador</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="col-8">
+                <div id="introducao" class="container mb-5">
+                    <h2>Introdução</h2>
+                    <p>IPLeiria SmartCampus API pode ser integrada em diversos dispositivos e aplicações.</p>
+                    <p>
+                        Mas antes de começar a utilizar a API, é recomendado a instalação de uma plataforma de suporte de API.
+                        Por exemplo:
+                        <a href="https://www.getpostman.com/" class="text-reset">Postman</a>,
+                        <a href="https://insomnia.rest/" class="text-reset">Insomnia</a> ou
+                        <a href="https://curl.haxx.se/" class="text-reset">curl</a>.
+                    </p>
+                </div>
+
+                <hr />
+                <!-- Sensores -->
+                <div id="sensores" class="container mb-5">
+                    <h2>Sensores</h2>
+                    <p>Os dados são fornecidos por sensores registos. Esses dados são automaticamente guardados e avaliados.</p>
+                </div>
+
+                <div id="gelallsensores" class="container mb-5">
+                    <h4>Todos os sensores</h4>
+                    <p>Qualquer utilizador pode visualizar os sensores: <span class="badge badge-light">(<strong>GET</strong>)</span></p>
+                    <div class="p-3 bg-dark text-white rounded align-middle" style="width: 800px">
+                        <p id="p_get_all_sensores" class="text-monospace p-0 m-0"></p>
+                    </div>
+                </div>
+
+                <div id="getsensorbyid" class="container mb-5">
+                    <h4>Pesquisa de um sensor pelo seu Id</h4>
+                    <p>Qualquer utilizador pode pesquisar um sensor pelo seu Id: <span class="badge badge-light">(<strong>GET</strong>)</span></p>
+                    <div class="p-3 bg-dark text-white rounded align-middle" style="width: 800px">
+                        <p id="p_get_sensor_id" class="text-monospace p-0 m-0"></p>
+                    </div>
+                </div>
+
+                <hr />
+                <!-- Utilizadores -->
+                <div id="utilizador" class="container mb-5">
+                    <h2>Utilizadores</h2>
+                    <p>IPLeiria SmartCampus API contem três tipos de utilizadores:</p>
+                    <ul>
+                        <li><strong>Não autenticado</strong></li>
+                        <li><strong>Autenticado</strong></li>
+                        <li><strong>Autenticado com permissões de Administrador</strong></li>
+                    </ul>
+                </div>
+
+                <div id="autenticar" class="container mb-5">
+                    <h4>Autenticação</h4>
+                    <p>Para a autenticação é usado o esquema <strong>Basic Authentication</strong>. É feita atraves do <strong>Username</strong> ou <strong>Email</strong> e a <strong>Password</strong></p>
+                    <p>
+                        Para obter autenticação, no Postman, selecionar a tab <strong>Authorization</strong> e selecionar <strong>Basic Auth</strong> na dropdown list.
+                    </p>
+                    <div class="mx-auto " style="width: 700px;">
+                        <img src="images/preview-request-auth.png" class="img-fluid" alt="Postman Basic Auth" />
+                    </div>
+
+
+                    <p class="mt-5">
+                        Para obter dados para autenticação através: <span class="badge badge-light">(<strong>GET</strong>)</span>
+                    </p>
+                    <div class="p-3 bg-dark text-white rounded align-middle" style="width: 800px">
+                        <p id="p_get_auth" class="text-monospace p-0 m-0"></p>
+                    </div>
+                </div>
+
+                <div id="newuser" class="container mb-5">
+                    <h4>Criação de um novo utilizador</h4>
+                    <p>
+                        Para a criação de um novo utilizador: <span class="badge badge-light">(<strong>POST</strong>)</span>
+                    </p>
+
+                    <div class="p-3 bg-dark text-white rounded align-middle" style="width: 800px">
+                        <p id="p_post_user" class="text-monospace p-0 m-0"></p>
+                    </div>
+
+                    <p>
+                        Nota: Por defeito, o utilizador é criado como utilizador sem permissões de administrador.
+                    </p>
+                </div>
+
+                <div id="getuser" class="container mb-5">
+                    <h4>Obter dados</h4>
+                    <p>
+                        Para obter os seus próprios dados: <span class="badge badge-light">(<strong>GET</strong>)</span>
+                    </p>
+
+                    <div class="p-3 bg-dark text-white rounded align-middle" style="width: 800px">
+                        <p id="p_get_user" class="text-monospace p-0 m-0"></p>
+                    </div>
+                </div>
+
+                <div id="updateuser" class="container mb-5">
+                    <h4>Atualizador dados</h4>
+                    <p>
+                        Para a atualização dos seus próprios dados: <span class="badge badge-light">(<strong>PUT</strong>)</span>
+                    </p>
+
+                    <div class="p-3 bg-dark text-white rounded align-middle" style="width: 800px">
+                        <p id="p_put_user" class="text-monospace p-0 m-0"></p>
+                    </div>
+                </div>
+
+                <hr />
+                <!-- Sensores Pessoais -->
+                <div id="sensores-pessoais" class="container mb-5">
+                    <h2>Sensores pessoais criados por utilizadores</h2>
+                </div>
+
+                <div id="getallpersonalsensors" class="container mb-5">
+                    <h4>Obter todos os sensores do utilizadores</h4>
+                    <p>
+                        Qualquer tipo de utilizador pode visualizar os sensores criados pelos utilizadores: <span class="badge badge-light">(<strong>GET</strong>)</span>
+                    </p>
+                    <div class="p-3 bg-dark text-white rounded align-middle" style="width: 800px">
+                        <p id="p_get_sensores_users" class="text-monospace p-0 m-0"></p>
+                    </div>
+                </div>
+
+                <div id="getpersonalsensorbyid" class="container mb-5">
+                    <h4>Obter sensores do utilizador por Id</h4>
+                    <p>
+                        Qualquer tipo de utilizador pode pesquisar o sensor criados pelos utilizadores pelo seu Id: <span class="badge badge-light">(<strong>GET</strong>)</span>
+                    </p>
+                    <div class="p-3 bg-dark text-white rounded align-middle" style="width: 800px">
+                        <p id="p_get_sensor_user_id" class="text-monospace p-0 m-0"></p>
+                    </div>
+                </div>
+
+                <div id="getpersonalsensorbyusername" class="container mb-5">
+                    <h4>Obter sensores de um determinado utilizador</h4>
+                    <p>
+                        Qualquer tipo de utilizador pode pesquisar o sensores criados por um determinado utilizador: <span class="badge badge-light">(<strong>GET</strong>)</span>
+                    </p>
+                    <div class="p-3 bg-dark text-white rounded align-middle" style="width: 800px">
+                        <p id="p_get_sensor_user_username" class="text-monospace p-0 m-0"></p>
+                    </div>
+                </div>
+
+                <div id="getpersonalsensorbyautenticateduser" class="container mb-5">
+                    <h4>Obter sensores do utilizador autenticado</h4>
+                    <p>
+                        Um utilizador autenticado pode persquisar por o sensores criados por si: <span class="badge badge-light">(<strong>GET</strong>)</span>
+                    </p>
+                    <div class="p-3 bg-dark text-white rounded align-middle" style="width: 800px">
+                        <p id="p_get_sensor_user_autenticated_user" class="text-monospace p-0 m-0"></p>
+                    </div>
+                </div>
+
+                <div id="postnewpersonalsensor" class="container mb-5">
+                    <h4>Criar um novo sensor</h4>
+                    <p>
+                        Um utilizador autenticado pode criar um novo sensor: <span class="badge badge-light">(<strong>POST</strong>)</span>
+                    </p>
+                    <div class="p-3 bg-dark text-white rounded align-middle" style="width: 800px">
+                        <p id="p_post_sensor_user" class="text-monospace p-0 m-0"></p>
+                    </div>
+                </div>
+
+                <div id="updatepersonalsensor" class="container mb-5">
+                    <h4>Avaliar um sensor</h4>
+                    <p>
+                        Um utilizador autenticado pode avaliar os dados de um sensor: <span class="badge badge-light">(<strong>PUT</strong>)</span>
+                    </p>
+                    <div class="p-3 bg-dark text-white rounded align-middle" style="width: 800px">
+                        <p id="p_put_sensor_user" class="text-monospace p-0 m-0"></p>
+                    </div>
+                </div>
+
+                <hr />
+                <!-- Administrador -->
+                <div id="administrador" class="container mb-5">
+                    <h2>Administrador</h2>
+                </div>
+
+                <div id="getalluses" class="container mb-5">
+                    <h4>Obter todos os utilizadores</h4>
+                    <p>
+                        Apenas o administrador pode obter todos os dados dos utilizadores: <span class="badge badge-light">(<strong>GET</strong>)</span>
+                    </p>
+                    <div class="p-3 bg-dark text-white rounded align-middle" style="width: 800px">
+                        <p id="p_get_all_users" class="text-monospace p-0 m-0"></p>
+                    </div>
+                </div>
+
+                <div id="updaterole" class="container mb-5">
+                    <h4>Atualizar "Role" de um utilizador</h4>
+                    <p>
+                        Apenas o administrador pode atualizar o "Role" de um utilizador: <span class="badge badge-light">(<strong>PUT</strong>)</span>
+                    </p>
+                    <div class="p-3 bg-dark text-white rounded align-middle" style="width: 800px">
+                        <p id="p_update_user_role" class="text-monospace p-0 m-0"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script>
+        var $doc = $('html, body');
+        $('a').click(function () {
+            $doc.animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+            return false;
+        });
+    </script>
+
+    <script>
+        function init() {
+            var baseURL = window.location.origin + "/api/";
+            document.getElementById("p_get_all_sensores").innerHTML = baseURL + "sensores";
+            document.getElementById("p_get_sensor_id").innerHTML = baseURL + "sensores/{id}";
+            
+
+            document.getElementById("p_get_auth").innerHTML = baseURL + "auth";
+            document.getElementById("p_post_user").innerHTML = baseURL + "utilizadores";
+            document.getElementById("p_get_user").innerHTML = baseURL + "utilizadores/me";
+            document.getElementById("p_put_user").innerHTML = baseURL + "utilizadores/me";
+                
+            document.getElementById("p_get_sensores_users").innerHTML = baseURL + "sensores-users";
+            document.getElementById("p_get_sensor_user_id").innerHTML = baseURL + "sensores-users/{id}";
+            document.getElementById("p_get_sensor_user_username").innerHTML = baseURL + "sensores-users/{username}";
+            document.getElementById("p_get_sensor_user_autenticated_user").innerHTML = baseURL + "sensores-users/me";
+            document.getElementById("p_post_sensor_user").innerHTML = baseURL + "sensores-users";
+            document.getElementById("p_put_sensor_user").innerHTML = baseURL + "sensores-users/{id}";
+                
+            document.getElementById("p_get_all_users").innerHTML = baseURL + "utilizadores";
+            document.getElementById("p_update_user_role").innerHTML = baseURL + "utilizadores/{id}";
+        }
+
+        init();
+    </script>
+</body>
+</html>

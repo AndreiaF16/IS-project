@@ -1,0 +1,13 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="IPLeiriaSmartCampusAPI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Server=f1addfa7-1f87-47fb-9183-ab1b00af3c6b.sqlserver.sequelizer.com;Database=dbf1addfa71f8747fb9183ab1b00af3c6b;User ID=styogfmpdgdczdjc;Password=kxPxixAhDiNeex8FmduXwiqu7vhWHfJh3CkcDgSpowJNBiF5C6RkV2JbgtzVqMGy;&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Server=f1addfa7-1f87-47fb-9183-ab1b00af3c6b.sqlserver.sequelizer.com;Database=dbf1addfa71f8747fb9183ab1b00af3c6b;User ID=styogfmpdgdczdjc;Password=kxPxixAhDiNeex8FmduXwiqu7vhWHfJh3CkcDgSpowJNBiF5C6RkV2JbgtzVqMGy;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
