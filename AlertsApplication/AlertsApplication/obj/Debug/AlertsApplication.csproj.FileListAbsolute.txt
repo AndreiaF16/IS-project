@@ -10,3 +10,15 @@ C:\Users\david\source\repos\AlertsApplication\AlertsApplication\obj\Debug\Alerts
 C:\Users\david\source\repos\AlertsApplication\AlertsApplication\bin\Debug\M2Mqtt.Net.dll
 C:\Users\david\source\repos\AlertsApplication\AlertsApplication\bin\Debug\M2Mqtt.Net.pdb
 C:\Users\david\source\repos\AlertsApplication\AlertsApplication\obj\Debug\AlertsApplication.csproj.CopyComplete
+C:\Users\david\Desktop\Projeto-IS\AlertsApplication\AlertsApplication\bin\Debug\AlertsApplication.exe.config
+C:\Users\david\Desktop\Projeto-IS\AlertsApplication\AlertsApplication\bin\Debug\AlertsApplication.exe
+C:\Users\david\Desktop\Projeto-IS\AlertsApplication\AlertsApplication\bin\Debug\AlertsApplication.pdb
+C:\Users\david\Desktop\Projeto-IS\AlertsApplication\AlertsApplication\bin\Debug\M2Mqtt.Net.dll
+C:\Users\david\Desktop\Projeto-IS\AlertsApplication\AlertsApplication\bin\Debug\M2Mqtt.Net.pdb
+C:\Users\david\Desktop\Projeto-IS\AlertsApplication\AlertsApplication\obj\Debug\AlertsApplication.csprojAssemblyReference.cache
+C:\Users\david\Desktop\Projeto-IS\AlertsApplication\AlertsApplication\obj\Debug\AlertsApplication.Form1.resources
+C:\Users\david\Desktop\Projeto-IS\AlertsApplication\AlertsApplication\obj\Debug\AlertsApplication.Properties.Resources.resources
+C:\Users\david\Desktop\Projeto-IS\AlertsApplication\AlertsApplication\obj\Debug\AlertsApplication.csproj.GenerateResource.cache
+C:\Users\david\Desktop\Projeto-IS\AlertsApplication\AlertsApplication\obj\Debug\AlertsApplication.csproj.CopyComplete
+C:\Users\david\Desktop\Projeto-IS\AlertsApplication\AlertsApplication\obj\Debug\AlertsApplication.exe
+C:\Users\david\Desktop\Projeto-IS\AlertsApplication\AlertsApplication\obj\Debug\AlertsApplication.pdb

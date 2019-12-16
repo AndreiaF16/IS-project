@@ -42,7 +42,7 @@
     <operator>Equal</operator>
     <value>123</value>
     <value2>0</value2>
-    <enable>false</enable>
+    <enable>False</enable>
     <description>desc</description>
   </alert>
   <alert>

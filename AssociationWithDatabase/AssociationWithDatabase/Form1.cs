@@ -63,6 +63,7 @@ namespace AssociationWithDatabase
                             List<Sensor> sensores = ConvertReceivedDataSource(Encoding.UTF8.GetString(e.Message));
                             foreach (var sensor in sensores)
                             {
+                                MessageBox.Show("Persistencia");
                                 SqlCommand cmd = new SqlCommand("INSERT INTO SENSORES VALUES (@id,@temperatura,@humidade,@bateria,@data,@alerta,@decricao)", conn);
                                 cmd.Parameters.AddWithValue("@id", sensor.SensorID);
                                 cmd.Parameters.AddWithValue("@temperatura", sensor.Temperature);
